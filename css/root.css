@@ -1,0 +1,6 @@
+:root {
+    --title-section-font-size: calc(1.325rem + .9vw);
+    --head-foot-color: #232227;
+    --btn-color: #2ed078 !important;
+    --btn-hover-color:  #25af64  !important;
+}

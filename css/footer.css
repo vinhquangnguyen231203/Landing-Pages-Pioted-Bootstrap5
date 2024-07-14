@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: white;
+    opacity: 0.5;
+    font-weight: 100;
+}
+
+.footer{
+    background-color: var(--head-foot-color);
+}
+footer .content{
+   margin: 58px 58px auto 58px;
+   padding-left: 12px;
+   padding-right: 12px;
+}
+
+footer p{
+    opacity: 0.5;
+}
+
+footer i{
+    color: white;
+    opacity: 0.5;
+}
+
+
+
+footer hr{
+    width: 80%;
+    height: 2px;
+    margin: 0 auto;
+    background-color: white;
+    opacity: 0.3;
+    ;
+}

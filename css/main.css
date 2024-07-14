@@ -1,0 +1,609 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    margin-top: 100px;
+}
+section{
+
+    margin-top: 120px;
+    padding: 20px;
+    overflow: hidden; 
+    /* Ngăn ko cho margin con nổi ra ngoài (dư margin bên phải) */
+}
+
+/* All */
+.bg-gray{
+    background-color: whitesmoke;
+}
+
+.title-section {
+    text-transform: capitalize;
+    font-size: var(--title-section-font-size);
+    text-align: center;
+}
+.icon-section{
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+}
+.icon-section:before{
+    content: "____";
+    opacity: 0.3;
+    position: absolute;
+    top: -25%;
+    left: 40%;
+}
+.icon-section:after{
+    content: "____";
+    opacity: 0.3;
+    position: absolute;
+    top: -25%;
+    right: 40%;
+}
+.btn_square{
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 22px;
+    padding-right: 22px;
+    background-color: var(--btn-color);
+    border-radius: 8px ;
+    border-style: solid;
+    border-color: var(--btn-color);
+}
+
+.btn_square:hover{
+    background-color: var(--btn-hover-color);
+    color: white;
+}
+
+.introduction{
+    text-align: center;
+}
+.introduction h2{
+    font-weight: 600 !important;
+    font-size: 2rem;
+}
+
+.introduction p{
+    opacity: 0.6;
+}
+
+.btn_border{
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 22px;
+    padding-right: 22px;
+    background-color: var(--btn-color);
+    border-radius: 20px ;
+    border-style: solid;
+    border-color: var(--btn-color);
+}
+#faq{
+    margin-top: 0;
+}
+#faq .box{
+    background-color: white;
+}
+#faq h5{
+    display: inline-block;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+#faq .content p{
+    color: black;
+    opacity: 0.6;
+}
+#faq .box{
+    border-radius: 12px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+#bg-overlay {
+    position: relative;
+    /* Background cover */
+    background-image: url(/images/img-1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 0; /* Background nằm dưới cùng */
+    margin-top: 0;
+}
+
+#bg-overlay .bg-overlay {
+    background: rgba(42, 42, 45, 0.88);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* bg-overlay nằm trên background */
+}
+
+#bg-overlay .container {
+    position: absolute;
+    z-index: 2; /* Container nằm trên bg-overlay */
+}
+
+#bg-overlay .container .icon-box i {
+    color: white;
+    font-size: 30px;
+}
+
+#bg-overlay .box {
+    width: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    border-color: rgba(255, 255, 255, 0.2);
+    border-style: dashed;
+ 
+}
+
+#bg-overlay .box .content h1 {
+    color: white;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+#bg-overlay .box .content p {
+    text-transform: capitalize;
+    font-size: 15px;
+    color: white;
+}
+
+#team .box{
+    border-radius: 10px;
+    border-style: solid;
+    padding: 18px;
+    border-color: rgba(255, 255, 255, 0.5);
+    border-style: dashed;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#team .box .content-box h6{
+    font-weight: 600;
+    font-size: 19px;
+    color: #2ed078;
+}
+#team .box .content-box p{
+    font-size: 13px;
+    color: #777;
+    margin-top: 0;
+}
+#team .box .line hr{
+    width: 70%;
+    margin: 0 auto;
+}
+#team .box .footer-box i{
+    margin: 10px;
+    opacity: 0.5;
+}
+#team .box .footer-box i:hover{
+    cursor: pointer;
+}
+#pricing{
+    margin-top: 60px;
+}
+#pricing .title h5{
+    padding: 40px;
+    opacity: 0.7;
+}
+#pricing .description{
+    text-transform: capitalize;
+    font-size: 14px;
+}
+#pricing .description p{
+    opacity: 0.8;
+}
+#pricing .description span{
+    font-weight: 700;
+}
+#pricing .box{
+    border: 2px solid #e9ecef;
+    padding: 40px;
+    border-top: #2ed078;
+    border-top-width: 4px;
+    border-top-style: solid;
+    position: relative;
+}
+#pricing .box .price h1{
+    font-size: 50px;
+}
+#pricing .plan:before{
+    content: "Best Plan";
+    position: absolute;
+    width: 130px;
+    height: 35px;
+    color: white;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 14px;
+    background-color: #2ed078;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -17px; /* Điều chỉnh khoảng cách từ trên */
+    left: 50%; /* Căn giữa theo chiều ngang */
+    transform: translateX(-50%); /* Dịch chuyển sang trái một nửa chiều rộng */
+    border-radius: 5px; /* Thêm bo tròn cho đẹp */
+}
+
+#client .carousel-indicators {
+    position: absolute;
+    bottom: 10px; /* Điều chỉnh khoảng cách từ đáy */
+    left: 35%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+    align-items: end;
+}
+
+#client .carousel-indicators button {
+    width: 12px; /* Đặt chiều rộng */
+    height: 12px; /* Đặt chiều cao */
+    border-radius: 50%; /* Bo tròn */
+    background-color: white; /* Màu nền trắng */
+    border: 2px solid green; /* Viền màu xanh lá */
+    opacity: 1; /* Đảm bảo nút không trong suốt */
+    margin: 3px; /* Khoảng cách giữa các nút */
+    margin-top: 50px;
+}
+
+#client .carousel-indicators .active {
+    background-color: green; /* Màu nền xanh lá khi được chọn */
+    border: 2px solid green; /* Đảm bảo viền vẫn màu xanh lá */
+}
+
+#client .multi-line-text {
+    width: 60%; /* Điều chỉnh chiều rộng để nội dung hiển thị thành 3 dòng */
+    margin: 0 auto; /* Căn giữa nội dung nếu cần */
+    white-space: normal; /* Đảm bảo ngắt dòng */
+    overflow-wrap: break-word; /* Đảm bảo các từ sẽ ngắt dòng đúng cách */
+    font-weight: 600 !important;
+    font-size: 22px ;
+}
+
+#client .ceo-name .multi-line-name{
+    width: 120px; /* Điều chỉnh chiều rộng để nội dung hiển thị thành 3 dòng */
+    margin: 0 auto; /* Căn giữa nội dung nếu cần */
+    white-space: normal; /* Đảm bảo ngắt dòng */
+    overflow-wrap: break-word; /* Đảm bảo các từ sẽ ngắt dòng đúng cách */
+    font-weight: 600 !important;
+    font-size: 18px !important;
+}
+
+#client .ceo-name span{
+    font-weight: 200;
+}
+
+#screenshot .box{
+    padding: 12px;
+    border-style: solid;
+    border-radius: 7px;
+    border-color: #dee2e6;
+    border-width: 0.5px;
+}
+
+#presentation .video_box {
+    position: relative; /* Thiết lập context cho vị trí absolute của nút */
+    display: inline-block; /* Đảm bảo video_box chỉ chiếm không gian cần thiết */
+}
+
+#presentation .btn_video_presentation {
+    width: 10%;
+    height: 20%;
+    background-color: #2ed078;
+    border-radius: 50% 50%;
+    position: absolute;
+    top: 50%; /* Đặt nút ở giữa theo chiều dọc */
+    left: 50%; /* Đặt nút ở giữa theo chiều ngang */
+    transform: translate(-50%, -50%); /* Căn giữa chính xác */
+    display: flex; /* Trung tâm nội dung bên trong nút */
+    align-items: center; /* Canh giữa nội dung theo chiều dọc */
+    justify-content: center; /* Canh giữa nội dung theo chiều ngang */
+}
+
+/* Đảm bảo rằng icon bên trong nút được căn giữa */
+#presentation .btn_video_presentation i {
+    color: white;
+    font-size: 90%;
+}
+
+#work .box .work_icon{
+    width: 70px;
+    height: 70px;
+    background-color: #2ed078;
+    border-radius: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#work .box .work_icon i {
+    color: white;
+    font-size: 30px;
+}
+
+#work .row_center {
+    position: relative;
+}
+
+#work .row_arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Tạo khoảng cách giữa các hàng */
+}
+
+#work .working_icons_left,
+#work .working_icons_right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#work .row_arrow .working_icons_left {
+    margin-right: 120px; /* Khoảng cách giữa mũi tên và phần tử giữa */
+}
+
+#work .row_arrow .working_icons_right {
+    margin-left: 120px; /* Khoảng cách giữa mũi tên và phần tử giữa */
+}
+
+#work .row_arrow i {
+    color: #2ed078;
+    font-size: 50px; /* Đảm bảo kích thước mũi tên phù hợp */
+
+}
+#work .container{
+    position: relative;
+}
+#work .row_arrow{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+
+}
+
+#features .box-content p{
+    opacity: 0.7;
+    width: 400px;
+    white-space: normal; /* Đảm bảo ngắt dòng */
+    overflow-wrap: break-word; /* Đảm bảo các từ sẽ ngắt dòng đúng cách */
+    font-size: 15px !important;
+}
+#features .box-content i{
+    color: #2ed078;
+    font-weight: 500;
+}
+
+/* Căn giữa */
+main {
+    margin: 100px auto 0 auto;
+    padding: 0px; /* Điều chỉnh giá trị này theo chiều rộng mong muốn */
+}
+section {
+    margin: 120px auto 0 auto;
+    padding: 20px;
+    max-width: 1200px; /* Điều chỉnh giá trị này theo chiều rộng mong muốn */
+}
+#bg-overlay .container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px; /* Điều chỉnh giá trị này theo chiều rộng mong muốn */
+}
+#team .box, #pricing .box, #client .multi-line-text, #client .ceo-name .multi-line-name, #screenshot .box, #presentation .video_box {
+    margin: 0 auto;
+    max-width: 1200px; /* Điều chỉnh giá trị này theo chiều rộng mong muốn */
+}
+#work .container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px; /* Điều chỉnh giá trị này theo chiều rộng mong muốn */
+}
+#features .box-content {
+    margin: 0 auto;
+    max-width: 400px; /* Điều chỉnh giá trị này theo chiều rộng mong muốn */
+}
+#services .col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#services .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 300px;
+    border-radius: 8px;
+    border: 0.3px dotted #d8d8d8;;
+    
+    padding: 15px 2px;
+    
+}
+
+#services .box:hover{
+    transition: 0.5s;
+    transform: translateY(-10px);
+    border: none;
+}
+#services .box .box-icon{
+    width: 70px;
+    height: 70px;
+    border-radius: 50% 50%;
+    border-style: solid;
+    border-color: transparent;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#services .box .box-icon i{
+    font-size: 30px;
+}
+
+
+
+#services .box1{
+    background-color: #fce7e5;
+    position: relative;
+    
+}
+#services .box2{
+    background-color: #e5f9ef;
+    position: relative;
+}
+#services .box3{
+    background-color: #e7effd;
+    position: relative;
+}
+#services .box4{
+    background-color: #fff6de;
+    position: relative;
+}
+#services .box5{
+    background-color: #e9eaff;
+    position: relative;
+}
+#services .box6{
+    background-color: #dedede;
+    position: relative;
+}
+
+#services .ser1{
+    position: absolute;
+    left: 70%;
+    top: 0;
+}
+#services .ser2{
+    position: absolute;
+    left: 70%;
+    top: 0;
+}
+#services .ser3{
+    position: absolute;
+    left: 70%;
+    top: 0;
+}
+#services .ser4{
+    position: absolute;
+    left: 70%;
+    top: 0;
+}
+#services .ser5{
+    position: absolute;
+    left: 70%;
+    top: 0;
+}
+#services .ser6{
+    position: absolute;
+    left: 70%;
+    top: 0;
+}
+
+#services .box-content h5{
+    text-transform: capitalize;
+    font-size: 1.25 rem;
+    font-family:  "Nunito Sans", sans-serif;;
+    line-height: 1.2;
+}
+
+#services .box-content p{
+    width: 100%;
+    opacity: 0.7;
+}
+
+#home {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Make the section occupy the full viewport height */
+    overflow: hidden;
+}
+
+#home .video-container {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Full height of the section */
+    z-index: 0;
+}
+
+#home .video-container iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%); /* Center the iframe */
+    pointer-events: none; /* Disable pointer events */
+    z-index: 1;
+}
+
+#home .bg-cover {
+    background: rgba(42, 42, 45, 0.88);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* bg-overlay nằm trên iframe */
+}
+
+#home .container {
+    position: absolute;
+    z-index: 3; /* Container nằm trên cùng */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+#home .container .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#home h1{
+    width: 80%;
+    white-space: wrap;
+    font-size: 50px;
+}
+#home p{
+    opacity: 0.7;
+}
+
+#home .title{
+    width: 80px;
+    height: 35px;
+    border-radius: 8px;
+    background-color: #42524c;
+    color: #2fca75;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+

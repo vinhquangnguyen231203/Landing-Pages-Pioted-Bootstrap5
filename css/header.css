@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header .fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #313438;
+}
+
+header .navbar-brand img {
+    height: 32px;
+}
+
+header .nav-item {
+    padding: 0.5rem;
+}
+
+header .navbar-toggler {
+    border: none;
+}
+
+/* Các liên kết trong navbar có màu trắng và đổi thành màu vàng khi hover */
+header .nav-link {
+    color: white; /* Màu mặc định của liên kết */
+}
+
+header .nav-link:hover {
+    color: yellow; /* Màu khi di chuột qua liên kết */
+}
+
